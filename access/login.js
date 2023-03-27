@@ -20,7 +20,6 @@ for(let i =0;i<change.length;i++){
     if(nameLogin.value === '' || passLogin.value === ''){
         window.focus();
         passLogin.focus();
-    
     }
     localStorage.setItem('username', nameLogin.value.trim());
     localStorage.setItem('password', passLogin.value.trim());
@@ -29,6 +28,5 @@ for(let i =0;i<change.length;i++){
     localStorage.setItem('userRegister', userRegister.value.trim());
     localStorage.setItem('passRegister' , passRegister.value.trim());
     localStorage.setItem('emailRegister',emailRegister.value.trim());
-
  })
  
