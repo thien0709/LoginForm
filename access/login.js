@@ -29,4 +29,9 @@ for(let i =0;i<change.length;i++){
     localStorage.setItem('passRegister' , passRegister.value.trim());
     localStorage.setItem('emailRegister',emailRegister.value.trim());
  })
- 
+ fetch('./access/main.json')
+ .then(response => response.json())
+ .then(data => 
+    console.log(data.address.street)
+   )
+ .catch(error => console.error(error));
