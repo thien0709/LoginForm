@@ -19,6 +19,7 @@ html{
   
 }
 body{
+    position: relative;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -103,4 +104,29 @@ body{
     cursor: pointer;
     text-decoration: underline;
     color: var(--blue);
+}
+#access,#error{
+    display: none;
+    position:absolute;
+    top: 2rem;
+    right: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 20rem;
+    height: 5rem;
+    backdrop-filter: blur(0.5rem);
+    font-size: 0.5rem;
+    border-radius: 2rem;
+}
+#access.active,
+#error.active{
+    display: flex;
+}
+#access i,#error i{
+    font-size: 1rem;
+    color: var(--gray);
+}
+#access i:hover,#error i:hover{
+    cursor: pointer;
+    color: var(--orange);
 }
