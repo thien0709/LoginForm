@@ -1,18 +1,17 @@
 {
-    "username": {
-      "street": "123 Main St",
-      "city": "Anytown",
-      "state": "CA",
-      "zip": "12345"
-    },
-    "phoneNumbers": [
+    "accounts": [
       {
-        "type": "home",
-        "number": "555-555-1234"
+        "username": "user1",
+        "password": "password1"
       },
       {
-        "type": "work",
-        "number": "555-555-5678"
+        "username": "user2",
+        "password": "password2"
+      },
+      {
+        "username": "user3",
+        "password": "password3"
       }
     ]
   }
+  
