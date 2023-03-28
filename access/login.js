@@ -53,6 +53,7 @@ fetch("./access/main.json")
           access.classList.remove("active");
         }, 2000);
       }
+      count = 0;
     });
   })
   .catch((error) => console.error(error));
