@@ -1,3 +1,4 @@
+//Change position img in box
 const change = document.querySelectorAll("#box h6");
 const change1 = document.querySelector(".change");
 for (let i = 0; i < change.length; i++) {
@@ -26,10 +27,9 @@ registerBtn.addEventListener("click", function () {
   localStorage.setItem("passRegister", passRegister.value.trim());
   localStorage.setItem("emailRegister", emailRegister.value.trim());
 });
-//Check username and password | Notification
+//Check username and password login | Notification
 const access = document.querySelector("#access");
 const error = document.querySelector("#error");
-console.log(access, error);
 fetch("./access/main.json")
   .then((response) => response.json())
   .then((data) => {
@@ -47,6 +47,7 @@ fetch("./access/main.json")
         setTimeout(() => {
           error.classList.remove("active");
         }, 2000);
+          nameLogin.focus();
       } else {
         access.classList.add("active");
         setTimeout(() => {
@@ -57,3 +58,25 @@ fetch("./access/main.json")
     });
   })
   .catch((error) => console.error(error));
+//Register
+const signup = document.querySelector("#sign");
+const signer = document.querySelector("#signer")
+registerBtn.addEventListener("click", function () {
+  if (
+    userRegister.value.trim().length == 0 ||
+    passRegister.value.trim().length == 0 ||
+    emailRegister.value.trim().length == 0
+  ) {
+    emailRegister.focus();
+    signer.classList.add("active");
+    setTimeout(() => {
+      signer.classList.remove("active");
+    }, 2000);
+  }
+  else {
+      signup.classList.add("active");
+  setTimeout(() => {
+    signup.classList.remove("active");
+  }, 2000);
+  }
+});

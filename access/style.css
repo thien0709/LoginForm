@@ -108,7 +108,7 @@ body {
   color: var(--blue);
 }
 #access,
-#error {
+#error,#sign,#signer{
   display: none;
   position: absolute;
   top: 2rem;
@@ -116,22 +116,23 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 15rem;
-  height: 5rem;
+  height: 3rem;
   backdrop-filter: blur(0.5rem);
   font-size: 0.5rem;
   border-radius: 2rem;
+  padding: 0 0.5rem;
 }
-#error {
+#error,#signer {
   color: var(--red);
 }
-#access{
+#access,#sign{
   color: var(--green);
 }
 #access.active,
-#error.active {
+#error.active,#sign.active,#signer.active{
   display: flex;
 }
 #access i,
-#error i {
+#error i,#sign i,#signer i{
   font-size: 1rem;
 }
