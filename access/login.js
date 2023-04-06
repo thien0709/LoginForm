@@ -75,6 +75,8 @@ registerBtn.addEventListener("click", function () {
   }
   else {
       signup.classList.add("active");
+      change1.classList.toggle("active");
+      nameLogin.focus(); 
   setTimeout(() => {
     signup.classList.remove("active");
   }, 2000);
